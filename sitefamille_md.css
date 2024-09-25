@@ -1,0 +1,102 @@
+* { /* styles valables pour tous les éléments (initialisation des styles) */ 
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+    font-size: 16px ; /* taille des caractères par défaut */
+    color: rgb(0, 0, 0) ; /* couleur des caractères par défaut */
+    line-height: 1.4 ; /* hauteur de ligne : 1,4 x font-size */
+}
+
+html { /* élément racine, qu'on peut aussi nommer :root */
+    background-color: lightgreen ; /* pour avoir un fond pour les marges de body */
+}
+
+body {
+    height: 100vh ; /* on occupe toute la hauteur de la page */
+    margin: 2em ;
+    padding: 2em ;
+    background-color: rgb(200, 200, 200) ; /* gris clair */
+}
+
+header {
+    margin-bottom: 2em ;
+    padding: 1em ;
+    display: flex ; /* par défaut les blocs enfants se mettront côte à côte */
+    flex-direction: row ; /* sur une ligne */
+    flex-wrap: wrap ; /* et passeront à la ligne lorsqu'il n'y aura plus de place */
+    justify-content: space-around ; /* l'espace entre chaque bloc sera distibué également sous la forme : Espace Bloc1 Espace Bloc2 Espace Bloc3 Espace Bloc4 Espace (par exemple) */
+}
+
+main {
+    width: 100% ;
+    padding: 1em ;
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
+}
+
+p {
+    hyphens: auto ;
+    text-align: center ;
+}
+
+h1 {
+    width: 100% ;
+    margin-bottom: 1.5em ;
+    font-size: 1.5em ;
+    font-weight: bold ;
+    text-align: center ;
+}
+
+h2 {
+    width: 100% ;
+    font-size: 1.2em ;
+    margin-bottom: 1em ;
+}
+
+form {
+    margin: 1em ;
+    padding: 1em ;
+}
+
+select {
+    margin: 1em ;
+    color: blue;
+    font-weight: bold ;
+}
+    
+button {
+    margin-left: 1em ;
+    border-radius: 10px ;
+}
+
+/* Pour Traitement_md.php */
+body#Traitement_md main > div { /* tous les div qui sont enfants directs de main */
+    width: 100% ;
+}
+
+body#Traitement_md div#photos {
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: flex-start ;
+}
+    
+body#Traitement_md div#photos > img {
+    height: 100px ;
+    margin: 1em ;
+}
+
+body#Traitement_md div#photos .miniature {
+    position: static ;
+    /* width: 80px ; */
+    height: 80px ;
+    padding: 5px ;
+}
+
+body#Traitement_md div#photos .zoom {
+    position: fixed ;
+    top: 0 ;
+    height: 100% ;
+}
